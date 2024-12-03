@@ -1,2 +1,1 @@
-# DEV_OPS
-DEVOPS
+# curso-devops

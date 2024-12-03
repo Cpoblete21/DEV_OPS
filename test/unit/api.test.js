@@ -1,5 +1,9 @@
 const request = require('supertest');
-const app = require('../../src/app');
+const { app, server } = require('../../src/app');  // Import both app and server
+
+afterAll(() => {
+  server.close();  // Close the server after tests
+});
 
 test('La ruta "/" responde con un mensaje', async () => {
     const response = await request(app).get('/');
